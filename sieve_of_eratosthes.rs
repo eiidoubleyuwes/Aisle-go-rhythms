@@ -22,3 +22,14 @@ fn main (){
     } 
 }
 //Function to check if a number is prime
+fn is_prime(number: &u32) -> bool{
+    //Iterate through all numbers from 2 to the square root of the number
+    for i in 2..((*number as f64).sqrt() as u32 + 1){
+        //If the number is divisible by any of the numbers, it is not prime
+        if number % i == 0{
+            return false;
+        }
+    }
+    //If the number is not divisible by any of the numbers, it is prime
+    true
+}
