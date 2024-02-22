@@ -33,4 +33,16 @@ fn main() {
     println!("The result of the mod-exponent algorithm is: {}", mod_exponent(base, binary, modu));
  
 }
+fn mod_exponent(base: i32, binary: Vec<i32>, modu: i32) -> i32 {
+  let mut result = 1;
 
+  for bit in binary {
+    result = result * result % modu;
+
+    if bit == 1 {
+      result = (base * result) % modu;
+    }
+  }
+
+  result
+}
