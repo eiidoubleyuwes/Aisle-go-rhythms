@@ -18,7 +18,10 @@ fn main() {
         let num: i32 = num.trim().parse().unwrap();
         arr.push(num);
     }
-    let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    //Update this array with the user values
+    let mut arr = arr;
+    arr.sort();
+    //Print the array
     //Allow user to write the number to search
     let mut num = String::new();
     println!("Enter the number to search: ");
