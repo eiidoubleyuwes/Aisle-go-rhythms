@@ -9,7 +9,7 @@ fn main (){
     //using u32 for only positive integers
     let limit: u32 = limit.trim().parse().unwrap();
     //List of all numbers from 2 to the limit
-    let mut numbers: Vec<u32> = (2..limit).collect();
+    let numbers: Vec<u32> = (2..limit).collect();
     //List of all prime numbers
     let mut primes: Vec<u32> = Vec::new();
 
@@ -18,6 +18,7 @@ fn main (){
         //If the number is prime, add it to the primes list
         if is_prime(number){
             primes.push(*number);
+            println!("{}", number);
         }
     } 
 }
@@ -29,7 +30,9 @@ fn is_prime(number: &u32) -> bool{
         if number % i == 0{
             return false;
         }
+        
     }
     //If the number is not divisible by any of the numbers, it is prime
     true
 }
+
