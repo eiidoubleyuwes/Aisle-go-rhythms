@@ -4,6 +4,7 @@ The Algorithm works as follows:
 It uses GCD of the two numbers using the formula: b=aq+r and a = cq1+r1.
 This process continues until the last non-zero reminder
 
+This is a simple algorithm
 */
 use std::io;
 
@@ -15,4 +16,6 @@ fn main(){
     let mut b = String::new();
     io::stdin().read_line(&mut b).expect("Failed to read value");
     println!("You have entered {} and {}",a,b);
+    
+
 }
